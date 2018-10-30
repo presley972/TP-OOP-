@@ -11,14 +11,24 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-final class Post{
+final class Post
+{
 
     private $id;
     private $title;
     private $commente;
+    private $user;
 
-    public function __construct(string $id, string $name)
+    public function __construct(string $id, string $title, string $commente, string $user)
     {
+        $this->id = $id;
+        $this->title = $title;
+        $this->commente = $commente;
+        $this->user = $user;
+    }
 
+    public function gettitle(){
+
+        return $this->title;
     }
 }
